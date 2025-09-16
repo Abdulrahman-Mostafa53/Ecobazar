@@ -1,0 +1,26 @@
+{
+  "name": "ecobazar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./build/css/style.css --watch",
+    "organize": "npx prettier --write \"**/*.html\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdulrahman-Mostafa53/Ecobazar.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Abdulrahman-Mostafa53/Ecobazar/issues"
+  },
+  "homepage": "https://github.com/Abdulrahman-Mostafa53/Ecobazar#readme",
+  "dependencies": {
+    "tailwindcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
