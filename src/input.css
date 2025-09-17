@@ -35,3 +35,11 @@
 h2{
     color: #20b52500;
 }
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+i{
+    display: block;
+    margin-bottom: -1px;
+}
