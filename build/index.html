@@ -14,16 +14,19 @@
     <header>
       <div class="py-2 bg-white border-b border-gray-100">
         <div class="container flex flex-col sm:flex-row justify-between items-center gap-3 text-gray-600 font-[400]">
-          <p class="text-center">Store Location: Lincoln- 344, Illinois, Chicago, USA</p>
+          <p class="text-center text-xs">
+            <i class="icon-location_2"></i>
+            Store Location: Lincoln- 344, Illinois, Chicago, USA
+          </p>
           <div class="flex gap-4 justify-between items-center">
-            <button class="text-gray-600 font-[400] cursor-pointer">
+            <button class="text-gray-600 font-[400] cursor-pointer text-xs">
               ENG
             </button>
-            <button class="text-gray-600 font-[400] cursor-pointer">
+            <button class="text-gray-600 font-[400] cursor-pointer text-xs">
               USD
             </button>
             <span class="block h-5 w-[2px] bg-gray-100"></span>
-            <a href="#" class="text-gray-600 font-[400]">Sign In / Sign Up</a>
+            <a href="#" class="text-gray-600 font-[400] text-xs">Sign In / Sign Up</a>
           </div>
         </div>
       </div>
@@ -37,7 +40,7 @@
           </div>
           <div class="flex gap-2 sm:gap-4 justify-between items-center">
             <a class="text-gray-600 font-normal cursor-pointer">
-              <i class="icon-user text-2xl sm:text-3xl"></i>
+              <i class="icon-heart text-black text-2xl sm:text-3xl"></i>
             </a>
             <span class="block h-5 w-[2px] bg-gray-100"></span>
             <div class="flex gap-2 items-center sm:gap-4">
@@ -55,7 +58,7 @@
       <nav class="bg-gray-800 py-3">
         <div class="container flex justify-between items-center gap-4">
           <button class="block md:hidden">
-            <i class="icon-box text-white text-3xl"></i>
+            <i class="icon-burger_menu text-white text-xl"></i>
           </button>
           <ul class="hidden md:flex justify-between items-center gap-5">
             <li>
@@ -75,11 +78,87 @@
             </li>
           </ul>
           <div class="flex gap-2 text-white items-center font-[400]">
-            <i class="icon-twitter text-md"></i>
+            <i class="icon-phone_2 text-md"></i>
             (+20) 123 4567 890
           </div>
         </div>
       </nav>
     </header>
+    <section class="flex flex-col gap-6">
+      <div class="container grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="relative overflow-auto rounded-lg md:col-span-2 lg:row-span-2">
+          <img src="images/hero.png" alt="Offer" class="w-full h-full z-0 object-cover">
+          <div class="flex flex-col gap-3 sm:gap-5 justify-start items-start absolute top-1/2 left-5 -translate-y-1/2 z-1">
+            <h1 class="text-white text-xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.2]">Fresh & Healthy<br>Organic Food</h1>
+            <div class="flex gap-2 flex-col pl-3 border-l-2 border-success-bright">
+              <h2 class="text-white text-sm sm:text-lg font-medium flex gap-2 sm:gap-3 items-center">Sales Up To <span class="inline-block p-1 sm:px-3 rounded-md bg-warning">30% OFF</span></h2>
+              <p class="text-white text-xs sm:text-sm font-extralight hidden sm:block">Free shipping on all your orders.</p>
+            </div>
+            <a href="#" class="rounded-4xl bg-white text-success text-sm font-medium px-6 py-2 text-center flex gap-2 items-center">Shop Now <i class="icon-arrow_right_1 text-success"></i></a>
+          </div>
+        </div>
+        <div class="relative overflow-auto rounded-lg">
+          <img src="images/offer_1.png" alt="Offer" class="w-full h-full z-0 object-cover">
+          <div class="flex flex-col gap-3 sm:gap-5 justify-start items-start absolute top-0 left-0 p-6 z-1">
+            <div class="flex gap-0 flex-col">
+              <h2 class="text-xs sm:text-xl md:text-sm">SUMMER SALE</h2>
+              <h1 class="text-black text-3xl font-bold sm:text-6xl md:text-5xl">75% OFF</h1>
+            </div>
+            <p class="text-gray-600 text-sm">Only Fruits & Vegetables</p>
+            <a href="#" class="text-success text-sm font-semibold text-center flex gap-2 items-center">Shop Now <i class="icon-arrow_right_1 text-success"></i></a>
+          </div>
+        </div>
+        <div class="relative overflow-auto rounded-lg ">
+          <img src="images/offer_2.png" alt="Offer" class="w-full h-full z-0 object-cover">
+          <div class="flex flex-col gap-3 sm:gap-5 justify-start items-start absolute top-1/2 left-1/2 -translate-1/2 w-full z-1 text-center">
+            <div class="flex gap-0 sm:gap-2 flex-col w-full">
+              <h2 class="text-xs sm:text-sm text-white text-center">BEST DEAL</h2>
+              <h1 class="text-white text-3xl sm:text-5xl md:text-4xl font-semibold text-center">Special Products<br>Deal of the Month</h1>
+            </div>
+            <a href="#" class="text-success text-sm font-semibold text-center flex gap-2 items-center justify-center w-full">Shop Now <i class="icon-arrow_right_1 text-success"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="shadow-lg p-5 flex justify-around items-center gap-3 gap-y-5 flex-wrap rounded-lg">
+          <div class="flex gap-4 items-center">
+            <i class="icon-vehicle_3 text-2xl text-success"></i>
+            <div class="flex flex-col gap-0 justify-start items-start">
+              <h2 class="font-semibold text-lg">Free Shipping</h2>
+              <p class="text-gray-600 font-extralight text-sm">
+                Free shipping on all your order
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-center">
+            <i class="icon-headphone text-2xl text-success"></i>
+            <div class="flex flex-col gap-0 justify-start items-start">
+              <h2 class="font-semibold text-lg">Customer Support 24/7</h2>
+              <p class="text-gray-600 font-extralight text-sm">
+                Instant access to Support
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-center">
+            <i class="icon-bag_3 text-2xl text-success"></i>
+            <div class="flex flex-col gap-0 justify-start items-start">
+              <h2 class="font-semibold text-lg">100% Secure Payment</h2>
+              <p class="text-gray-600 font-extralight text-sm">
+                We ensure your money is save
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-center">
+            <i class="icon-box text-2xl text-success"></i>
+            <div class="flex flex-col gap-0 justify-start items-start">
+              <h2 class="font-semibold text-lg">Money-Back Guarantee</h2>
+              <p class="text-gray-600 font-extralight text-sm">
+                30 Days Money-Back Guarantee
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

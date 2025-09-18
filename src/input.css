@@ -32,14 +32,14 @@
     --shadow-featured: 0 0 32px 0 #00000014;
     --blur-leaf: 4px
 }
-h2{
-    color: #20b52500;
-}
 .container {
     margin: 0 auto;
     padding: 0 15px;
 }
 i{
-    display: block;
+    display: inline-block;
     margin-bottom: -1px;
+}
+section {
+    padding: 30px 0;
 }
