@@ -27,129 +27,99 @@
 
 .icon-burger_menu:before {
   content: "\e922";
-  color: #000;
 }
 .icon-user:before {
   content: "\e940";
-  color: #000;
 }
 .icon-location_2:before {
   content: "\e941";
-  color: #000;
 }
 .icon-search:before {
   content: "\e942";
 }
 .icon-coffee:before {
   content: "\e91c";
-  color: #000;
 }
 .icon-cupcake:before {
   content: "\e91d";
-  color: #000;
 }
 .icon-cutlery:before {
   content: "\e91e";
-  color: #000;
 }
 .icon-fish:before {
   content: "\e91f";
-  color: #000;
 }
 .icon-food:before {
   content: "\e920";
-  color: #000;
 }
 .icon-location_1:before {
   content: "\e923";
-  color: #000;
 }
 .icon-phone_2:before {
   content: "\e924";
-  color: #000;
 }
 .icon-letter:before {
   content: "\e925";
-  color: #000;
 }
 .icon-iphone:before {
   content: "\e926";
-  color: #000;
 }
 .icon-google_play:before {
   content: "\e927";
-  color: #000;
 }
 .icon-arrow_right_2:before {
   content: "\e928";
-  color: #000;
 }
 .icon-refresh:before {
   content: "\e92c";
-  color: #000;
 }
 .icon-gear:before {
   content: "\e92d";
-  color: #000;
 }
 .icon-exit:before {
   content: "\e92e";
-  color: #000;
 }
 .icon-bag_3:before {
   content: "\e92f";
-  color: #000;
 }
 .icon-box_2:before {
   content: "\e930";
-  color: #000;
 }
 .icon-ice-cream:before {
   content: "\e931";
-  color: #000;
 }
 .icon-meat:before {
   content: "\e932";
-  color: #000;
 }
 .icon-pie:before {
   content: "\e933";
 }
 .icon-potatoes:before {
   content: "\e934";
-  color: #000;
 }
 .icon-salad:before {
   content: "\e936";
-  color: #000;
 }
 .icon-steak:before {
   content: "\e937";
-  color: #000;
 }
 .icon-turkey:before {
   content: "\e938";
-  color: #000;
 }
 .icon-quote:before {
   content: "\e93a";
-  color: #000;
 }
 .icon-play:before {
   content: "\e93b";
-  color: #000;
 }
 .icon-apple:before {
   content: "\e93c";
-  color: #000;
 }
 .icon-vehicle_3:before {
   content: "\e93e";
-  color: #000;
 }
 .icon-headphone:before {
   content: "\e93f";
-  color: #000;
 }
 .icon-bag_2:before {
   content: "\e900";
@@ -165,44 +135,36 @@
 }
 .icon-check-bold:before {
   content: "\e904";
-  color: #000;
 }
 .icon-minus:before {
   content: "\e905";
-  color: #000;
 }
 .icon-remove_1:before {
   content: "\e906";
 }
 .icon-link:before {
   content: "\e907";
-  color: #000;
 }
 .icon-warning_1:before {
   content: "\e908";
-  color: #000;
 }
 .icon-warning_2:before {
   content: "\e909";
-  color: #000;
 }
 .icon-check:before {
   content: "\e90a";
-  color: #000;
 }
 .icon-dashboard:before {
   content: "\e90b";
 }
 .icon-vehicle_2:before {
   content: "\e90c";
-  color: #000;
 }
 .icon-arrow_right_1:before {
   content: "\e90d";
 }
 .icon-star:before {
   content: "\e90e";
-  color: #000;
 }
 .icon-vehicle_1:before {
   content: "\e90f";
@@ -215,34 +177,31 @@
 }
 .icon-home:before {
   content: "\e912";
-  color: #000;
 }
 .icon-heart:before {
   content: "\e913";
 }
 .icon-instagram:before {
   content: "\e914";
-  color: #000;
 }
 .icon-angle-up:before {
   content: "\e915";
 }
 .icon-heart-fill:before {
   content: "\e916";
-  color: #000;
 }
 .icon-facebook:before {
   content: "\e917";
-  color: #000;
 }
 .icon-twitter:before {
   content: "\e918";
-  color: #000;
 }
 .icon-pinterest:before {
   content: "\e919";
-  color: #000;
 }
 .icon-phone_1:before {
   content: "\e91a";
+}
+.icon-filter:before{
+  content: "\e91b";
 }

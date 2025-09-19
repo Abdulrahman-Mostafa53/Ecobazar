@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+
+
+@layer base{
+    *{
+        font-family: "Poppins";
+    }
+
+}
+@layer components{
+    span.active-radio{
+        border: 1.5px solid var(--color-success) !important;
+    }
+}
 @theme{
     --color-success-bright: #84D187;
     --color-success: #00B207;
@@ -30,16 +43,12 @@
     --shadow-blog: 0 0 20px 0 #0807361a;
     --shadow-line: 0 1px 0 0  #E5E5E5;
     --shadow-featured: 0 0 32px 0 #00000014;
-    --blur-leaf: 4px
-}
-h2{
-    color: #20b52500;
+    --blur-leaf: 4px;
+    --breakpoint-2xl: 84.375rem;
 }
 .container {
-    margin: 0 auto;
-    padding: 0 15px;
-}
-i{
-    display: block;
-    margin-bottom: -1px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }

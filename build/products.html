@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/iconmoon.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+  </head>
+  <body class="max-h-dvh md:max-h-fit overflow-hidden md:overflow-y-visible">
+    <overlay class="absolute z-40 bg-[#0000006e] size-full hidden"></overlay>
+    <header>
+      <div class="py-2 bg-white border-b border-gray-100">
+        <div class="container flex flex-col sm:flex-row justify-between items-center gap-3 text-gray-600 font-[400]">
+          <p class="text-center">Store Location: Lincoln- 344, Illinois, Chicago, USA</p>
+          <div class="flex gap-4 justify-between items-center">
+            <button class="text-gray-600 font-[400] cursor-pointer">
+              ENG
+            </button>
+            <button class="text-gray-600 font-[400] cursor-pointer">
+              USD
+            </button>
+            <span class="block h-5 w-[2px] bg-gray-100"></span>
+            <a href="#" class="text-gray-600 font-[400]">Sign In / Sign Up</a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white py-3">
+        <div class="container flex justify-between items-center gap-4">
+          <img src="./images/Logo.png" alt="Ecobazar" class="hidden md:block">
+          <div class="flex gap-0 items-stretch relative flex-1 md:max-w-[410px]">
+            <i class="icon-search text-xl absolute top-1/2 left-[10px] -translate-y-1/2"></i>
+            <input type="text" placeholder="Search" class="p-2 px-3 pl-10 border rounded-l-lg border-r-0 border-gray-600 outline-none w-full text-sm sm:text-md">
+            <button class="bg-success text-white p-2 sm:px-5 rounded-r-lg cursor-pointer text-sm sm:text-md">Search</button>
+          </div>
+          <div class="flex gap-2 sm:gap-4 justify-between items-center">
+            <a class="text-gray-600 font-normal cursor-pointer">
+              <i class="icon-user text-2xl sm:text-3xl"></i>
+            </a>
+            <span class="block h-5 w-[2px] bg-gray-100"></span>
+            <div class="flex gap-2 items-center sm:gap-4">
+              <a href="#">
+                <i class="icon-bag_1 text-2xl sm:text-3xl"></i>
+              </a>
+              <div class="flex flex-col gap-0 items-start">
+                <p class="text-sm">Shopping Cart</p>
+                <p class="text-sm font-bold">$57.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="bg-gray-800 py-3">
+        <div class="container flex justify-between items-center gap-4">
+          <button class="block md:hidden">
+            <i class="icon-box text-white text-3xl"></i>
+          </button>
+          <ul class="hidden md:flex justify-between items-center gap-5">
+            <li>
+              <a href="#" class="text-white font-[400] text-sm">Home</a>
+            </li>
+            <li>
+              <a href="#" class="text-white font-[400] text-sm">Shop</a>
+            </li>
+            <li>
+              <a href="#" class="text-white font-[400] text-sm">Blog</a>
+            </li>
+            <li>
+              <a href="#" class="text-white font-[400] text-sm">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="text-white font-[400] text-sm">Contact Us</a>
+            </li>
+          </ul>
+          <div class="flex gap-2 text-white items-center font-[400]">
+            <i class="icon-twitter text-md"></i>
+            (+20) 123 4567 890
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="max-h-[calc(100vh-200px)] md:max-h-fit overflow-auto md:overflow-visible">
+      <nav class="h-[120px] overflow-hidden relative flex items-center">
+        <img src="images/Breadcrumbs.png" class="absolute w-full -z-10 " alt="">
+        <ul class="flex gap-2.5 container text-gray-500 items-center">
+          <li class="flex items-center"><i class="icon-home text-xl"></i></li>
+          <li class="flex items-center"><i class="icon-angle-up rotate-90 block text-[10px]"></i></li>
+          <li class="text-base font-normal">Categories</li>
+          <li class="flex items-center"><i class="icon-angle-up rotate-90 block text-[10px]"></i></li>
+          <li class="text-base font-normal text-success">Vegetables</li>
+        </ul>
+      </nav>
+      <section class="pt-8 grid grid-cols-12 gap-6 container ">
+          <search class="duration-200 md:relative absolute z-50 md:flex flex-col col-span-3 bg-white px-10 md:px-0 md:py-0 py-8 overflow-auto h-4/5 md:h-fit left-0 bottom-0 rounded-t-4xl md:rounded-none translate-y-full md:translate-y-0">
+              <div class="flex justify-center mb-12 relative md:hidden">
+                <i class="icon-remove_1 absolute left-0 top-1/2 -translate-y-1/2" id="hide-mobile-flt"></i>
+                <h2 class="text-gray-900 text-xl font-semibold">Filter by</h2>
+              </div>
+              <button id="hide-flt" class=" hidden md:flex w-fit gap-3 text-white text-sm font-[600] rounded-[43px] bg-success py-3.5 px-8 mb-6">
+                Filter
+                <i class="icon-filter text-xl"></i>
+              </button>
+              <fieldset class="pb-[15px] border-b border-gray-100">
+                <legend class="flex justify-between items-center w-full pb-5 text-gray-900 font-medium text-xl">
+                  All Categories
+                  <i class="icon-angle-up text-sm"></i>
+                </legend>
+                <div class="overflow-hidden">
+                  <label for="cat1" class="flex gap-2 relative pb-2.5">
+                    <input class="w-5 h-5 appearance-none border-[1px] rounded-full flex justify-center items-center border-gray-200 cursor-pointer checked:before:bg-success checked:before:w-3 checked:before:h-3 checked:before:rounded-full checked:border-[1.5px] checked:border-success" type="radio" name="categories" id="cat1" value="Fresh Fruit">
+                    <span class="text-sm font-normal text-gray-900">Fresh Fruit</span>
+                    <span class="text-sm font-normal text-gray-500">(25)</span>
+                  </label>
+                  <label for="cat2" class="flex gap-2 relative py-2.5">
+                    <input class="w-5 h-5 appearance-none border-[1px] rounded-full flex justify-center items-center border-gray-200 cursor-pointer checked:before:bg-success checked:before:w-3 checked:before:h-3 checked:before:rounded-full checked:border-[1.5px] checked:border-success" type="radio" name="categories" id="cat2" value="Vegetables">
+                    <span class="text-sm font-normal text-gray-900">Vegetables</span>
+                    <span class="text-sm font-normal text-gray-500">(25)</span>
+                  </label>
+                  <label for="cat3" class="flex gap-2 relative py-2.5">
+                    <input class="w-5 h-5 appearance-none border-[1px] rounded-full flex justify-center items-center border-gray-200 cursor-pointer checked:before:bg-success checked:before:w-3 checked:before:h-3 checked:before:rounded-full checked:border-[1.5px] checked:border-success" type="radio" name="categories" id="cat3" value="Cooking">
+                    <span class="text-sm font-normal text-gray-900">Cooking</span>
+                    <span class="text-sm font-normal text-gray-500">(25)</span>
+                  </label>
+                  <label for="cat4" class="flex gap-2 relative py-2.5">
+                    <input class="w-5 h-5 appearance-none border-[1px] rounded-full flex justify-center items-center border-gray-200 cursor-pointer checked:before:bg-success checked:before:w-3 checked:before:h-3 checked:before:rounded-full checked:border-[1.5px] checked:border-success" type="radio" name="categories" id="cat4" value="Snacks">
+                    <span class="text-sm font-normal text-gray-900">Snacks</span>
+                    <span class="text-sm font-normal text-gray-500">(25)</span>
+                  </label>
+                  <label for="cat5" class="flex gap-2 relative py-2.5">
+                    <input class="w-5 h-5 appearance-none border-[1px] rounded-full flex justify-center items-center border-gray-200 cursor-pointer checked:before:bg-success checked:before:w-3 checked:before:h-3 checked:before:rounded-full checked:border-[1.5px] checked:border-success" type="radio" name="categories" id="cat5" value="Beverages">
+                    <span class="text-sm font-normal text-gray-900">Beverages</span>
+                    <span class="text-sm font-normal text-gray-500">(25)</span>
+                  </label>
+                  <label for="cat6" class="flex gap-2 relative py-2.5">
+                    <input class="w-5 h-5 appearance-none border-[1px] rounded-full flex justify-center items-center border-gray-200 cursor-pointer checked:before:bg-success checked:before:w-3 checked:before:h-3 checked:before:rounded-full checked:border-[1.5px] checked:border-success" type="radio" name="categories" id="cat6" value="Beauty & Health">
+                    <span class="text-sm font-normal text-gray-900">Beauty & Health</span>
+                    <span class="text-sm font-normal text-gray-500">(25)</span>
+                  </label>
+                  <label for="cat7" class="flex gap-2 relative py-2.5">
+                    <input class="w-5 h-5 appearance-none border-[1px] rounded-full flex justify-center items-center border-gray-200 cursor-pointer checked:before:bg-success checked:before:w-3 checked:before:h-3 checked:before:rounded-full checked:border-[1.5px] checked:border-success" type="radio" name="categories" id="cat7" value="Bread & Bakery">
+                    <span class="text-sm font-normal text-gray-900">Bread & Bakery</span>
+                    <span class="text-sm font-normal text-gray-500">(25)</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="pb-[23px] border-b border-gray-100">
+                <legend class="pt-5 flex justify-between items-center w-full pb-5 text-gray-900 font-medium text-xl">
+                  Price
+                  <i class="icon-angle-up text-sm"></i>
+                </legend>
+                <div class="overflow-hidden">
+                  <div class="relative h-[18px] flex items-center">
+                    <span class="block h-1.5 rounded-2xl bg-gray-100 w-full"></span>
+                    <span class="block w-[18px] h-[18px] bg-white rounded-full absolute border-2 border-success"></span>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="pb-[15px] border-b border-gray-100">
+                <legend class="pt-5 flex justify-between items-center w-full pb-5 text-gray-900 font-medium text-xl">
+                  Rating
+                  <i class="icon-angle-up text-sm"></i>
+                </legend>
+                <div class="overflow-hidden">
+                    <label for="rate1" class="flex gap-2 items-center">
+                      <input type="radio" name="rating" id="rate1" class="flex text-white justify-center items-center appearance-none w-5 h-5 border border-gray-200 rounded-[3px] checked:bg-success checked:border-none checked:before:content-['\e90a'] checked:before:font-['icomoon'] text-sm">
+                      <div class="flex py-2.5">
+                        <i class="icon-star text-warning w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-warning w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-warning w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-warning w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-warning w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <span class="font-normal text-sm text-gray-900 block">&nbsp5.0</span>
+                      </div>
+                    </label>
+                    <label for="rate2" class="flex gap-2 items-center">
+                      <input type="radio" name="rating" id="rate2" class="flex text-white justify-center items-center appearance-none w-5 h-5 border border-gray-200 rounded-[3px] checked:bg-success checked:border-none checked:before:content-['\e90a'] checked:before:font-['icomoon'] text-sm">
+                      <div class="flex py-2.5">
+                        <i class="icon-star text-warning w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-warning w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-warning w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-warning w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-gray-200 w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <span class="font-normal text-sm text-gray-900 block">&nbsp4.0 & up</span>
+                      </div>
+                    </label>
+                    <label for="rate3" class="flex gap-2 items-center">
+                      <input type="radio" name="rating" id="rate3" class="flex text-white justify-center items-center appearance-none w-5 h-5 border border-gray-200 rounded-[3px] checked:bg-success checked:border-none checked:before:content-['\e90a'] checked:before:font-['icomoon'] text-sm">
+                      <div class="flex py-2.5">
+                        <i class="icon-star text-warning w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-warning w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-warning w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-gray-200 w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-gray-200 w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <span class="font-normal text-sm text-gray-900 block">&nbsp3.0 & up</span>
+                      </div>
+                    </label>
+                    <label for="rate4" class="flex gap-2 items-center">
+                      <input type="radio" name="rating" id="rate4" class="flex text-white justify-center items-center appearance-none w-5 h-5 border border-gray-200 rounded-[3px] checked:bg-success checked:border-none checked:before:content-['\e90a'] checked:before:font-['icomoon'] text-sm">
+                      <div class="flex py-2.5">
+                        <i class="icon-star text-warning w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-warning w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-gray-200 w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-gray-200 w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-gray-200 w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <span class="font-normal text-sm text-gray-900 block">&nbsp2.0 & up</span>
+                      </div>
+                    </label>
+                    <label for="rate5" class="flex gap-2 items-center">
+                      <input type="radio" name="rating" id="rate5" class="flex text-white justify-center items-center appearance-none w-5 h-5 border border-gray-200 rounded-[3px] checked:bg-success checked:border-none checked:before:content-['\e90a'] checked:before:font-['icomoon'] text-sm">
+                      <div class="flex pt-2.5 pb-2">
+                        <i class="icon-star text-warning w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-gray-200 w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-gray-200 w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-gray-200 w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <i class="icon-star text-gray-200 w-[18px] h-[18px] flex justify-center items-center"></i>
+                        <span class="font-normal text-sm text-gray-900 block">&nbsp1.0 & up</span>
+                      </div>
+                    </label>
+                </div>
+              </fieldset>
+              <fieldset class="pb-[25px] border-gray-100">
+                <legend class="pt-5 flex justify-between items-center w-full pb-5 text-gray-900 font-medium text-xl">
+                  Popular Tag
+                  <i class="icon-angle-up text-sm"></i>
+                </legend>
+                <div class="flex gap-2 flex-wrap overflow-hidden">
+                  <input type="checkbox" name="popular tag" id="tag1" class="appearance-none px-4 py-1.5 bg-gray-50 text-sm font-normal text-gray-900 checked:bg-success checked:text-white before:content-['Healthy'] rounded-[30px]">
+                  <input type="checkbox" name="popular tag" id="tag1" class="appearance-none px-4 py-1.5 bg-gray-50 text-sm font-normal text-gray-900 checked:bg-success checked:text-white before:content-['Low\002000fat'] rounded-[30px] whitespace-pre">
+                  <input type="checkbox" name="popular tag" id="tag1" class="appearance-none px-4 py-1.5 bg-gray-50 text-sm font-normal text-gray-900 checked:bg-success checked:text-white before:content-['Vegetarian'] rounded-[30px]">
+                  <input type="checkbox" name="popular tag" id="tag1" class="appearance-none px-4 py-1.5 bg-gray-50 text-sm font-normal text-gray-900 checked:bg-success checked:text-white before:content-['Kid\002000foods'] rounded-[30px]">
+                  <input type="checkbox" name="popular tag" id="tag1" class="appearance-none px-4 py-1.5 bg-gray-50 text-sm font-normal text-gray-900 checked:bg-success checked:text-white before:content-['Vitamins'] rounded-[30px]">
+                  <input type="checkbox" name="popular tag" id="tag1" class="appearance-none px-4 py-1.5 bg-gray-50 text-sm font-normal text-gray-900 checked:bg-success checked:text-white before:content-['Bread'] rounded-[30px]">
+                  <input type="checkbox" name="popular tag" id="tag1" class="appearance-none px-4 py-1.5 bg-gray-50 text-sm font-normal text-gray-900 checked:bg-success checked:text-white before:content-['Meat'] rounded-[30px]">
+                  <input type="checkbox" name="popular tag" id="tag1" class="appearance-none px-4 py-1.5 bg-gray-50 text-sm font-normal text-gray-900 checked:bg-success checked:text-white before:content-['Snacks'] rounded-[30px]">
+                  <input type="checkbox" name="popular tag" id="tag1" class="appearance-none px-4 py-1.5 bg-gray-50 text-sm font-normal text-gray-900 checked:bg-success checked:text-white before:content-['Tiffin'] rounded-[30px]">
+                  <input type="checkbox" name="popular tag" id="tag1" class="appearance-none px-4 py-1.5 bg-gray-50 text-sm font-normal text-gray-900 checked:bg-success checked:text-white before:content-['Launch'] rounded-[30px]">
+                  <input type="checkbox" name="popular tag" id="tag1" class="appearance-none px-4 py-1.5 bg-gray-50 text-sm font-normal text-gray-900 checked:bg-success checked:text-white before:content-['Dinner'] rounded-[30px]">
+                  <input type="checkbox" name="popular tag" id="tag1" class="appearance-none px-4 py-1.5 bg-gray-50 text-sm font-normal text-gray-900 checked:bg-success checked:text-white before:content-['Breakfast'] rounded-[30px]">
+                  <input type="checkbox" name="popular tag" id="tag1" class="appearance-none px-4 py-1.5 bg-gray-50 text-sm font-normal text-gray-900 checked:bg-success checked:text-white before:content-['Fruit'] rounded-[30px]">
+                </div>
+              </fieldset>
+              <div class="rounded-[10px] hidden md:block  relative overflow-hidden 2xl">
+                <img src="images/Bannar.png" alt="banner" class="-z-10">
+                <div class="absolute size-full bg-black top-0 opacity-60 2xl:hidden"></div>
+                <div class="absolute flex flex-col items-center top-5  w-full">
+                  <p>
+                    <span class="text-warning text-[32px] font-[600] md:text-2xl 2xl:text-[32px]">79% </span>
+                    <span class="2xl:text-2xl font-normal text-gray-900 text-xl md:text-white 2xl:text-gray-900">Discount</span>
+                  </p>
+                  <p class="text-gray-700 text-base font-normal mb-3 md:text-sm 2xl:text-base 2xl:text-gray-700 md:text-gray-50">on your first order</p>
+                  <button class="font-[600] text-success pr-3 relative hover:[&>i]:-right-1 md:text-sm 2xl:text-base">
+                    Shop Now
+                    <i class="icon-arrow_right_1 ml-3 duration-150 ease-in-out absolute right-0 translate-x-full -translate-y-1/2 top-1/2"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="pt-5 hidden md:block">
+                <h2 class="mb-3 text-xl font-medium text-gray-900">Sale Products</h2>
+                <div class="flex overflow-hidden rounded-md border border-gray-100 md:flex-col 2xl:flex-row duration-100 hover:border-success hover:shadow-hover hover:[&>div>p:first-of-type]:text-success-dark mb-4 hover:[&>div>img]:scale-125 ">
+                  <div class="flex justify-center p-1 ">
+                    <img src="images/Image.png" alt="" class="object-cover origin-center duration-100">
+                  </div>
+                  <div class="flex-1 px-3 pt-6 pb-[25px] md:px-4 md:pt-1 2xl:px-3 2xl:pt-6">
+                    <p class="font-normal text-sm text-gray-700 duration-100">Red Capsicum</p>
+                    <p>
+                      <span class="font-medium text-gray-900 text-base">$32.00</span>
+                      <span class="font-medium text-gray-400 text-base line-through">$20.99</span>
+                    </p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex overflow-hidden rounded-md border border-gray-100 md:flex-col 2xl:flex-row duration-100 hover:border-success hover:shadow-hover hover:[&>div>p:first-of-type]:text-success-dark mb-4 hover:[&>div>img]:scale-125 ">
+                  <div class="flex justify-center p-1">
+                    <img src="images/Image-1.png" alt="" class="object-cover origin-center duration-100">
+                  </div>
+                  <div class="flex-1 px-3 pt-6 pb-[25px] md:px-4 md:pt-1 2xl:px-3 2xl:pt-6">
+                    <p class="font-normal text-sm text-gray-700 duration-100">Red Capsicum</p>
+                    <p>
+                      <span class="font-medium text-gray-900 text-base">$32.00</span>
+                      <span class="font-medium text-gray-400 text-base line-through">$20.99</span>
+                    </p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex overflow-hidden rounded-md border border-gray-100 md:flex-col 2xl:flex-row duration-100 hover:border-success hover:shadow-hover hover:[&>div>p:first-of-type]:text-success-dark mb-4 hover:[&>div>img]:scale-125 ">
+                  <div class="flex justify-center p-1">
+                    <img src="images/Image-2.png" alt="" class="object-cover origin-center duration-100">
+                  </div>
+                  <div class="flex-1 px-3 pt-6 pb-[25px] md:px-4 md:pt-1 2xl:px-3 2xl:pt-6">
+                    <p class="font-normal text-sm text-gray-700 duration-100">Red Capsicum</p>
+                    <p>
+                      <span class="font-medium text-gray-900 text-base">$32.00</span>
+                      <span class="font-medium text-gray-400 text-base line-through">$20.99</span>
+                    </p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </search>
+          <div class="col-span-12 md:col-span-9">
+            <p class="font-normal text-base text-gray-600 md:hidden mb-6">
+              <span class="text-gray-900 font-[600] text-base">52</span>
+              Results Found
+            </p>
+            <div class="mb-6  flex justify-between items-end h-fit">
+              <label for="sort" class="flex items-center gap-2 text-gray-500 text-sm font-normal">
+                Sort by:
+                <select name="sort by" id="sort" class="bg-white border border-gray-100 rounded-sm pl-1 md:pl-4 pr-4 md:pr-10 py-2.5 text-sm font-normal text-gray-700 outline-none">
+                  <option value="1">Oldest</option>
+                  <option value="1">Latest</option>
+                </select>
+              </label>
+              <button id="show-mobile-flt" class="md:hidden w-fit flex gap-3 text-white text-sm font-[600] rounded-[43px] bg-success py-3.5 px-3.5 md:px-8">
+                Filter
+                <i class="icon-filter text-xl"></i>
+              </button>
+              <p class="font-normal text-base text-gray-600 hidden md:block">
+                <span class="text-gray-900 font-[600] text-base">52</span>
+                Results Found
+              </p>
+            </div>
+            <main class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
+              <div class="border border-gray-100 rounded-lg  group hover:border-success-dark hover:shadow-hover duration-200  overflow-hidden relative hover:scale-105">
+                <i class="icon-eye text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 delay-150 text absolute -right-10 top-[65px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <i class="icon-heart text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 text absolute -right-10 top-[19px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <div class="flex justify-center">
+                  <img src="images/potato.png" class="group-hover:scale-110 duration-300" alt="">
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                  <div>
+                    <h2 class="duration-100 group-hover:text-success-dark text-gray-700 text-sm font-normal">Big Potatos</h2>
+                    <p class="text-gray-900 text-base font-medium mb-1">$14.99</p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                  <i class="group-hover:bg-success duration-100 flex justify-center items-center rounded-full group-hover:text-white w-10 h-10 roundex-full bg-gray-50 icon-bag_1 text-xl text-gray-900"></i>
+                </div>
+              </div>
+              <div class="border border-gray-100 rounded-lg  group hover:border-success-dark hover:shadow-hover duration-200  overflow-hidden relative hover:scale-105">
+                <i class="icon-eye text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 delay-150 text absolute -right-10 top-[65px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <i class="icon-heart text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 text absolute -right-10 top-[19px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <div class="flex justify-center">
+                  <img src="images/potato.png" class="group-hover:scale-110 duration-300" alt="">
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                  <div>
+                    <h2 class="duration-100 group-hover:text-success-dark text-gray-700 text-sm font-normal">Big Potatos</h2>
+                    <p class="text-gray-900 text-base font-medium mb-1">$14.99</p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                  <i class="group-hover:bg-success duration-100 flex justify-center items-center rounded-full group-hover:text-white w-10 h-10 roundex-full bg-gray-50 icon-bag_1 text-xl text-gray-900"></i>
+                </div>
+              </div>              <div class="border border-gray-100 rounded-lg  group hover:border-success-dark hover:shadow-hover duration-200  overflow-hidden relative hover:scale-105">
+                <i class="icon-eye text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 delay-150 text absolute -right-10 top-[65px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <i class="icon-heart text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 text absolute -right-10 top-[19px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <div class="flex justify-center">
+                  <img src="images/potato.png" class="group-hover:scale-110 duration-300" alt="">
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                  <div>
+                    <h2 class="duration-100 group-hover:text-success-dark text-gray-700 text-sm font-normal">Big Potatos</h2>
+                    <p class="text-gray-900 text-base font-medium mb-1">$14.99</p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                  <i class="group-hover:bg-success duration-100 flex justify-center items-center rounded-full group-hover:text-white w-10 h-10 roundex-full bg-gray-50 icon-bag_1 text-xl text-gray-900"></i>
+                </div>
+              </div>              <div class="border border-gray-100 rounded-lg  group hover:border-success-dark hover:shadow-hover duration-200  overflow-hidden relative hover:scale-105">
+                <i class="icon-eye text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 delay-150 text absolute -right-10 top-[65px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <i class="icon-heart text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 text absolute -right-10 top-[19px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <div class="flex justify-center">
+                  <img src="images/potato.png" class="group-hover:scale-110 duration-300" alt="">
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                  <div>
+                    <h2 class="duration-100 group-hover:text-success-dark text-gray-700 text-sm font-normal">Big Potatos</h2>
+                    <p class="text-gray-900 text-base font-medium mb-1">$14.99</p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                  <i class="group-hover:bg-success duration-100 flex justify-center items-center rounded-full group-hover:text-white w-10 h-10 roundex-full bg-gray-50 icon-bag_1 text-xl text-gray-900"></i>
+                </div>
+              </div>              <div class="border border-gray-100 rounded-lg  group hover:border-success-dark hover:shadow-hover duration-200  overflow-hidden relative hover:scale-105">
+                <i class="icon-eye text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 delay-150 text absolute -right-10 top-[65px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <i class="icon-heart text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 text absolute -right-10 top-[19px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <div class="flex justify-center">
+                  <img src="images/potato.png" class="group-hover:scale-110 duration-300" alt="">
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                  <div>
+                    <h2 class="duration-100 group-hover:text-success-dark text-gray-700 text-sm font-normal">Big Potatos</h2>
+                    <p class="text-gray-900 text-base font-medium mb-1">$14.99</p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                  <i class="group-hover:bg-success duration-100 flex justify-center items-center rounded-full group-hover:text-white w-10 h-10 roundex-full bg-gray-50 icon-bag_1 text-xl text-gray-900"></i>
+                </div>
+              </div>              <div class="border border-gray-100 rounded-lg  group hover:border-success-dark hover:shadow-hover duration-200  overflow-hidden relative hover:scale-105">
+                <i class="icon-eye text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 delay-150 text absolute -right-10 top-[65px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <i class="icon-heart text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 text absolute -right-10 top-[19px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <div class="flex justify-center">
+                  <img src="images/potato.png" class="group-hover:scale-110 duration-300" alt="">
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                  <div>
+                    <h2 class="duration-100 group-hover:text-success-dark text-gray-700 text-sm font-normal">Big Potatos</h2>
+                    <p class="text-gray-900 text-base font-medium mb-1">$14.99</p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                  <i class="group-hover:bg-success duration-100 flex justify-center items-center rounded-full group-hover:text-white w-10 h-10 roundex-full bg-gray-50 icon-bag_1 text-xl text-gray-900"></i>
+                </div>
+              </div>              <div class="border border-gray-100 rounded-lg  group hover:border-success-dark hover:shadow-hover duration-200  overflow-hidden relative hover:scale-105">
+                <i class="icon-eye text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 delay-150 text absolute -right-10 top-[65px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <i class="icon-heart text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 text absolute -right-10 top-[19px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <div class="flex justify-center">
+                  <img src="images/potato.png" class="group-hover:scale-110 duration-300" alt="">
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                  <div>
+                    <h2 class="duration-100 group-hover:text-success-dark text-gray-700 text-sm font-normal">Big Potatos</h2>
+                    <p class="text-gray-900 text-base font-medium mb-1">$14.99</p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                  <i class="group-hover:bg-success duration-100 flex justify-center items-center rounded-full group-hover:text-white w-10 h-10 roundex-full bg-gray-50 icon-bag_1 text-xl text-gray-900"></i>
+                </div>
+              </div>              <div class="border border-gray-100 rounded-lg  group hover:border-success-dark hover:shadow-hover duration-200  overflow-hidden relative hover:scale-105">
+                <i class="icon-eye text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 delay-150 text absolute -right-10 top-[65px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <i class="icon-heart text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 text absolute -right-10 top-[19px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <div class="flex justify-center">
+                  <img src="images/potato.png" class="group-hover:scale-110 duration-300" alt="">
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                  <div>
+                    <h2 class="duration-100 group-hover:text-success-dark text-gray-700 text-sm font-normal">Big Potatos</h2>
+                    <p class="text-gray-900 text-base font-medium mb-1">$14.99</p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                  <i class="group-hover:bg-success duration-100 flex justify-center items-center rounded-full group-hover:text-white w-10 h-10 roundex-full bg-gray-50 icon-bag_1 text-xl text-gray-900"></i>
+                </div>
+              </div>              <div class="border border-gray-100 rounded-lg  group hover:border-success-dark hover:shadow-hover duration-200  overflow-hidden relative hover:scale-105">
+                <i class="icon-eye text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 delay-150 text absolute -right-10 top-[65px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <i class="icon-heart text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 text absolute -right-10 top-[19px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <div class="flex justify-center">
+                  <img src="images/potato.png" class="group-hover:scale-110 duration-300" alt="">
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                  <div>
+                    <h2 class="duration-100 group-hover:text-success-dark text-gray-700 text-sm font-normal">Big Potatos</h2>
+                    <p class="text-gray-900 text-base font-medium mb-1">$14.99</p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                  <i class="group-hover:bg-success duration-100 flex justify-center items-center rounded-full group-hover:text-white w-10 h-10 roundex-full bg-gray-50 icon-bag_1 text-xl text-gray-900"></i>
+                </div>
+              </div>              <div class="border border-gray-100 rounded-lg  group hover:border-success-dark hover:shadow-hover duration-200  overflow-hidden relative hover:scale-105">
+                <i class="icon-eye text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 delay-150 text absolute -right-10 top-[65px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <i class="icon-heart text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 text absolute -right-10 top-[19px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <div class="flex justify-center">
+                  <img src="images/potato.png" class="group-hover:scale-110 duration-300" alt="">
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                  <div>
+                    <h2 class="duration-100 group-hover:text-success-dark text-gray-700 text-sm font-normal">Big Potatos</h2>
+                    <p class="text-gray-900 text-base font-medium mb-1">$14.99</p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                  <i class="group-hover:bg-success duration-100 flex justify-center items-center rounded-full group-hover:text-white w-10 h-10 roundex-full bg-gray-50 icon-bag_1 text-xl text-gray-900"></i>
+                </div>
+              </div>              <div class="border border-gray-100 rounded-lg  group hover:border-success-dark hover:shadow-hover duration-200  overflow-hidden relative hover:scale-105">
+                <i class="icon-eye text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 delay-150 text absolute -right-10 top-[65px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <i class="icon-heart text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 text absolute -right-10 top-[19px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <div class="flex justify-center">
+                  <img src="images/potato.png" class="group-hover:scale-110 duration-300" alt="">
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                  <div>
+                    <h2 class="duration-100 group-hover:text-success-dark text-gray-700 text-sm font-normal">Big Potatos</h2>
+                    <p class="text-gray-900 text-base font-medium mb-1">$14.99</p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                  <i class="group-hover:bg-success duration-100 flex justify-center items-center rounded-full group-hover:text-white w-10 h-10 roundex-full bg-gray-50 icon-bag_1 text-xl text-gray-900"></i>
+                </div>
+              </div>              <div class="border border-gray-100 rounded-lg  group hover:border-success-dark hover:shadow-hover duration-200  overflow-hidden relative hover:scale-105">
+                <i class="icon-eye text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 delay-150 text absolute -right-10 top-[65px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <i class="icon-heart text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 text absolute -right-10 top-[19px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <div class="flex justify-center">
+                  <img src="images/potato.png" class="group-hover:scale-110 duration-300" alt="">
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                  <div>
+                    <h2 class="duration-100 group-hover:text-success-dark text-gray-700 text-sm font-normal">Big Potatos</h2>
+                    <p class="text-gray-900 text-base font-medium mb-1">$14.99</p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                  <i class="group-hover:bg-success duration-100 flex justify-center items-center rounded-full group-hover:text-white w-10 h-10 roundex-full bg-gray-50 icon-bag_1 text-xl text-gray-900"></i>
+                </div>
+              </div>              <div class="border border-gray-100 rounded-lg  group hover:border-success-dark hover:shadow-hover duration-200  overflow-hidden relative hover:scale-105">
+                <i class="icon-eye text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 delay-150 text absolute -right-10 top-[65px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <i class="icon-heart text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 text absolute -right-10 top-[19px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <div class="flex justify-center">
+                  <img src="images/potato.png" class="group-hover:scale-110 duration-300" alt="">
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                  <div>
+                    <h2 class="duration-100 group-hover:text-success-dark text-gray-700 text-sm font-normal">Big Potatos</h2>
+                    <p class="text-gray-900 text-base font-medium mb-1">$14.99</p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                  <i class="group-hover:bg-success duration-100 flex justify-center items-center rounded-full group-hover:text-white w-10 h-10 roundex-full bg-gray-50 icon-bag_1 text-xl text-gray-900"></i>
+                </div>
+              </div>              <div class="border border-gray-100 rounded-lg  group hover:border-success-dark hover:shadow-hover duration-200  overflow-hidden relative hover:scale-105">
+                <i class="icon-eye text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 delay-150 text absolute -right-10 top-[65px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <i class="icon-heart text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 text absolute -right-10 top-[19px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <div class="flex justify-center">
+                  <img src="images/potato.png" class="group-hover:scale-110 duration-300" alt="">
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                  <div>
+                    <h2 class="duration-100 group-hover:text-success-dark text-gray-700 text-sm font-normal">Big Potatos</h2>
+                    <p class="text-gray-900 text-base font-medium mb-1">$14.99</p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                  <i class="group-hover:bg-success duration-100 flex justify-center items-center rounded-full group-hover:text-white w-10 h-10 roundex-full bg-gray-50 icon-bag_1 text-xl text-gray-900"></i>
+                </div>
+              </div>              <div class="border border-gray-100 rounded-lg  group hover:border-success-dark hover:shadow-hover duration-200  overflow-hidden relative hover:scale-105">
+                <i class="icon-eye text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 delay-150 text absolute -right-10 top-[65px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <i class="icon-heart text-xl w-10 h-10 duration-300 hover:bg-gray-200 rounded-full border bg-white border-gray-50 text-gray-900 text absolute -right-10 top-[19px] group-hover:right-[19px] flex justify-center items-center z-10"></i>
+                <div class="flex justify-center">
+                  <img src="images/potato.png" class="group-hover:scale-110 duration-300" alt="">
+                </div>
+                <div class="p-4 flex justify-between items-center">
+                  <div>
+                    <h2 class="duration-100 group-hover:text-success-dark text-gray-700 text-sm font-normal">Big Potatos</h2>
+                    <p class="text-gray-900 text-base font-medium mb-1">$14.99</p>
+                    <div>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-warning"></i>
+                      <i class="icon-star text-xs text-gray-200"></i>
+                    </div>
+                  </div>
+                  <i class="group-hover:bg-success duration-100 flex justify-center items-center rounded-full group-hover:text-white w-10 h-10 roundex-full bg-gray-50 icon-bag_1 text-xl text-gray-900"></i>
+                </div>
+              </div>
+            </main>
+          </div>
+      </section>
+    </section>
+  </body>
+  <script src="js/products.js"></script>
+</html>
